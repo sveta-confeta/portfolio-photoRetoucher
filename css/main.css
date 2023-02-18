@@ -84,7 +84,7 @@ header.hero-section{
 
 }
 .main-header{
-    top:10vh;
+    top:7vh;
     position: absolute;
     left: 15vw;
 }
@@ -104,7 +104,7 @@ header.hero-section{
 .prof{
     font-size: calc(var(--index) * 1.5);
     position: absolute;
-    top:35vh;
+    top:40vh;
     letter-spacing: 5px;
     left: 40vw;
 
