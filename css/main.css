@@ -45,6 +45,10 @@
     --color-text:#cdc6c3;
     --gap:calc(var(--index) * 10);
 }
+/*will-change-чтоб работало плавно*/
+.content,.gallery__left,.gallery__right,.main-title > *{
+    will-change: transform;
+}
 body{
     background-color: #282828;
     color: var(--color-header);
