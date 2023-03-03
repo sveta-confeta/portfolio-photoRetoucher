@@ -132,7 +132,7 @@ header.hero-section{
 /*кнопки */
 .nav-wrapper{
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 nav{
     position: absolute;
