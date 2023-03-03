@@ -31,7 +31,14 @@
     font-style: normal;
     font-display: swap;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+}
 
 *{
     margin: 0;
@@ -39,6 +46,7 @@
     box-sizing: border-box;
 
 }
+
 :root{
     --index:calc(1vw + 1vh);
     --color-header:#fcf8f8;
@@ -84,31 +92,117 @@ header.hero-section{
 
 }
 .main-header{
-    top:7vh;
+    top:6vh;
     position: absolute;
     left: 15vw;
 }
+
 .main-title {
     font-family: 'Avatar';
     font-size: calc(var(--index) * 3);
+    top:0;
     position: absolute;
     width: min-content;
+
 }
-.main-title .name{
+ .name{
+     font-family: 'Avatar';
+     font-size: calc(var(--index) * 3);
     margin-left: 10vw;
 }
 
-.main-title .second-name{
+.second-name{
+    font-family: 'Avatar';
+    font-size: calc(var(--index) * 3);
     white-space:nowrap;
 }
 .prof{
-    font-size: calc(var(--index) * 1.5);
+    width:calc(var(--index) * 38) ;
+    font-size: calc(var(--index) * 1.3);
     position: absolute;
     top:40vh;
     letter-spacing: 5px;
-    left: 40vw;
+    left: 0;
 
 }
+/*кнопки */
+nav {
+    position: absolute;
+    margin-top: 64vh;
+    margin-left: 0;
+
+}
+
+ul {
+    display: inline-grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+    grid-template-columns: auto repeat(3, calc((var(--active, 0) *  calc(var(--index) * 7)) ));
+    transition: grid-template-columns 0.35s linear;
+}
+ ul li {
+    display: grid;
+    justify-content: end;
+
+}
+ul li:first-child{
+    z-index: 4;
+    color: #fcf8f8;
+    background: hsla(0, 0%, 60%, 0.07);
+    border: 1px solid #fcf8f8;
+    padding:calc(var(--index) * 0.6);
+    width:calc(var(--index) * 11);
+    letter-spacing: 1px;
+    border-radius:calc(var(--index) * 2);
+    margin: 0;
+    font-size: calc(var(--index) * 1.2);
+    backdrop-filter: blur(20px);
+    transition: color 0.2s, background 0.2s;
+    vertical-align: center;
+    cursor:pointer;
+}
+ul li img{
+    width: 30px;
+}
+ul li:nth-child(2) {
+    margin-left: 10px;
+    z-index: 3;
+}
+ul li:nth-child(3){
+    margin-left: 20px;
+    z-index: 2;
+}
+ul li:nth-child(4){
+    z-index: 1;
+    margin-left: 30px;
+}
+
+
+a {
+    width:calc(var(--index) * 6);
+    background: hsl(0 0% 60% / 0.18);
+    display: inline-block;
+    border: 1px solid #fcf8f8;
+    padding:calc(var(--index) * 0.4) calc(var(--index) * 0.6);
+    border-radius:calc(var(--index) * 2);
+    margin: 0;
+    font-size: calc(var(--index) * 0.7);
+    backdrop-filter: blur(20px);
+    transition: color 0.2s, background 0.2s;
+    text-decoration: none;
+    color: #fcf8f8;
+    text-align: center;
+}
+
+
+a:focus-visible {
+    outline-color: transparent;
+}
+
+ul:is(:focus-within, :hover) {
+    --active: 1;
+}
+/*/////кнопки*/
 .gallery{
     display: flex;
     padding: calc(var(--index) * 5) 0;
